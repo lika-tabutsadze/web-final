@@ -6,3 +6,10 @@
     justify-content: $justify;
     gap:$gap;
 }
+
+@mixin sec-category{
+    letter-spacing: 0.3em;
+    font-size: 12px;
+    color: $active-text;
+    font-weight: bold;
+}

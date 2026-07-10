@@ -142,10 +142,7 @@ body {
     
 }
 .about__description span {
-    letter-spacing: 0.3em;
-    color: $active-text;
-    font-size: 12px;
-    font-weight: bold;
+    @include sec-category;
 }
 .about__description h2 {
     font-size: 3rem;
@@ -176,7 +173,7 @@ body {
     bottom: 1rem;
     width: 12rem;
     height: 12rem;
-    border: 2px solid ;
+    border: 1px solid ;
     animation:boxAnimation 6s infinite ease;
 }
 
@@ -206,10 +203,7 @@ body {
     flex-direction: column;
 }
 .rooms__title span {
-    color: $active-text;
-    letter-spacing: 0.3em;
-    font-size: 12px;
-    font-weight: bold;
+    @include sec-category;
 }
 .rooms__title h2 {
     font-size: 3rem;
@@ -274,6 +268,74 @@ body {
     color: white;
 }
 
+
+
+
+// STYLING THE ACCOMMODATION SECTION
+
+.accommodation__section {
+    @include flex($gap:0rem);
+    background-color: $background-primary;
+    padding: 8rem 4rem;
+}
+
+.accommodation__container{
+    @include flex($gap:5rem);
+    flex-direction: column;
+}
+
+.accomm__title {
+    @include flex;
+    flex-direction: column;
+}
+
+.accomm__title h3 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: $primary-text;
+}
+
+.accomm__title span {
+    @include sec-category;
+}
+
+.accomm__cards {
+    display: grid;
+    grid-template-columns: repeat(4,208px);
+    column-gap: 1rem;
+}
+
+.accomm__card {
+    text-align: center;
+    @include flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+.accomm__icon {
+    padding: 2rem;
+    background-color: $background-secondary;
+    border-radius: 0.75rem;
+    color: $active-text;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.accomm__desc {
+    @include flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    color: $secondary-text;
+    line-height: 1.4rem;
+}
+
+.accomm__desc h4 {
+    font-size: 1.5rem;
+    color: $primary-text;
+}
+
+
+
 //=========== RESPONSIVE ======
 
 @media (max-width:1140px){
@@ -283,6 +345,13 @@ body {
     }
     .about__description p {
         font-size: 1rem;
+    }
+
+    // ACCOMMODATION SECTION
+    .accomm__cards {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        row-gap: 2rem;
     }
 }
 
@@ -375,6 +444,11 @@ body {
         grid-template-columns: 1fr;
         row-gap: 40px;
     }
+
+    // ACCOMMODATION SECTION
+    .accomm__title h3 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px){
@@ -400,9 +474,12 @@ body {
     .rooms__title h2 {
         font-size: 2rem;
     }
+
+    // ACCOMMODATION SECTION
+    .accomm__cards {
+        grid-template-columns: 1fr;
+    }
 }
-
-
 
 
 
