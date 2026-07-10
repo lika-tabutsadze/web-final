@@ -29,6 +29,7 @@ body {
 .logo__title {
     color: $primary-text;
     font-size: 32px;
+    transition: 0.3s;
 }
 
 
@@ -334,7 +335,48 @@ body {
     color: $primary-text;
 }
 
+// ========STYLING THE FOOTER ===============
+.footer {
+    background-color: $background-secondary;
+    padding: 3rem 1.5rem;
+    @include flex;
+}
 
+.footer__container {
+    @include flex($gap:8rem);
+}
+.footer__card {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.footer__list {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+}
+.footer__link {
+    color: $primary-text;
+    transition: 0.3s;
+}
+
+.footer__link:hover {
+    color: $active-text;
+}
+
+
+.footer__logo {
+    line-height: 1.5;
+    color: $active-text;
+}
+
+.list__title {
+    color: $primary-text;
+    font-weight: bold;
+    cursor: default;
+}
 
 //=========== RESPONSIVE ======
 
@@ -449,6 +491,18 @@ body {
     .accomm__title h3 {
         font-size: 2rem;
     }
+
+    // FOOTER 
+    .footer__container{
+        gap: 4rem;
+    }
+    .footer__logo {
+        font-size: 24px;
+    }
+    
+    .footer__list__item {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px){
@@ -478,6 +532,14 @@ body {
     // ACCOMMODATION SECTION
     .accomm__cards {
         grid-template-columns: 1fr;
+    }
+
+    // FOOTER
+    .footer__container {
+        flex-direction: column;
+    }
+    .footer__title{
+        text-align: center;
     }
 }
 
