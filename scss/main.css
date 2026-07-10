@@ -99,15 +99,114 @@ body {
   line-height: 1.25;
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .hero__desc {
   color: rgb(249, 248, 246);
   font-size: 18px;
   letter-spacing: 0.1em;
+  font-style: italic;
 }
 
+.about__section {
+  background-color: rgb(249, 248, 246);
+  width: 100%;
+  padding: 8rem 4rem;
+}
+
+.about__image {
+  min-height: 700px;
+  max-width: 400px;
+  position: relative;
+}
+
+.about__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.about__container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  max-width: 528px;
+  text-align: left;
+  gap: 2rem;
+}
+
+.about__description span {
+  letter-spacing: 0.3em;
+  color: rgb(163, 132, 77);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.about__description h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1C1C1A;
+}
+
+.about__description p {
+  line-height: 1.625;
+  color: rgb(68, 71, 74);
+  font-size: 18px;
+}
+
+.about--italic {
+  font-style: italic;
+}
+
+.about__description a {
+  color: rgb(163, 132, 77);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.about__image__decor {
+  display: block;
+  position: absolute;
+  left: -2.5rem;
+  bottom: 1rem;
+  width: 12rem;
+  height: 12rem;
+  border: 2px solid;
+  animation: boxAnimation 6s infinite ease;
+}
+
+@keyframes boxAnimation {
+  0% {
+    border-color: rgb(148, 19, 19);
+  }
+  25% {
+    border-color: rgb(163, 132, 77);
+  }
+  50% {
+    border-color: rgb(12, 12, 86);
+  }
+  100% {
+    border-color: rgb(4, 89, 4);
+  }
+}
+@media (max-width: 1140px) {
+  .about__description h2 {
+    font-size: 2.8rem;
+  }
+  .about__description p {
+    font-size: 1rem;
+  }
+}
 @media (max-width: 970px) {
   .logo__title {
     font-size: 24px;
@@ -120,6 +219,15 @@ body {
   }
   .booking__btn {
     padding: 8px 24px;
+  }
+  .about__description h2 {
+    font-size: 2.4rem;
+  }
+  .about__description p {
+    font-size: 0.8rem;
+  }
+  .about__image__decor {
+    display: none;
   }
 }
 @media (max-width: 834px) {
@@ -156,8 +264,20 @@ body {
   .hero__title {
     font-size: 44px;
   }
+  .about__container {
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about__description {
+    text-align: center;
+    margin: auto;
+  }
+  .about__image {
+    margin: auto;
+  }
 }
-@media (max-width: 834px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .logo__title {
     font-size: 26px;
   }
@@ -167,6 +287,9 @@ body {
   .hero__desc {
     font-size: 16px;
     letter-spacing: 0;
+  }
+  .about__description h2 {
+    font-size: 2rem;
   }
 }
 @media (max-width: 320px) {
@@ -178,5 +301,17 @@ body {
   }
   .hero__title {
     font-size: 30px;
+  }
+  .about__description h2 {
+    font-size: 1.3rem;
+  }
+  .about__description p {
+    font-size: 0.6rem;
+  }
+  .about__description span {
+    font-size: 0.6rem;
+  }
+  .about__description a {
+    font-size: 0.6rem;
   }
 }/*# sourceMappingURL=main.css.map */
