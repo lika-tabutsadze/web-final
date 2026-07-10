@@ -1,0 +1,130 @@
+body {
+  font-family: "Playfair Display";
+}
+
+.main__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: transparent;
+  width: 100%;
+}
+
+.header__container {
+  max-width: 1140px;
+  padding: 26px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  margin: 0 auto;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.logo__title {
+  color: #1C1C1A;
+  font-size: 32px;
+}
+
+.nav__link {
+  color: #1C1C1A;
+  font-size: 14px;
+  transition: 0.3s;
+  letter-spacing: 0.1em;
+}
+
+.nav__link--active {
+  color: rgb(163, 132, 77);
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.nav__link:hover, .logo__title:hover {
+  color: rgb(163, 132, 77);
+}
+
+.booking__btn {
+  border: none;
+  background-color: #1C1C1A;
+  color: white;
+  padding: 12px 32px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.booking__btn:hover {
+  background-color: rgb(163, 132, 77);
+}
+
+.burger__menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.burger__menu span {
+  height: 3px;
+  width: 24px;
+  background-color: rgb(163, 132, 77);
+}
+
+@media (max-width: 970px) {
+  .logo__title {
+    font-size: 24px;
+  }
+  .nav__list {
+    gap: 10px;
+  }
+  .nav__link {
+    font-size: 13px;
+  }
+  .booking__btn {
+    padding: 8px 24px;
+  }
+}
+@media (max-width: 834px) {
+  .logo__title {
+    font-size: 32px;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    background: rgb(249, 248, 246);
+    transition: 0.3s;
+  }
+  .navbar.active {
+    left: 0;
+  }
+  .nav__list {
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    text-align: center;
+  }
+  .header__container {
+    justify-content: space-around;
+    padding: 13px 20px;
+  }
+  .burger__menu {
+    display: flex;
+  }
+  .booking__btn {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .logo__title {
+    font-size: 26px;
+  }
+}/*# sourceMappingURL=main.css.map */

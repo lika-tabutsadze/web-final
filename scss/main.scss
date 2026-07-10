@@ -1,0 +1,133 @@
+@import './mixins';
+@import './variables';
+
+body {
+    font-family: 'Playfair Display';
+}
+
+// ======STYLING THE HEADER =========
+.main__header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+    width: 100%;
+}
+
+.header__container {
+    max-width: 1140px;
+    padding: 26px 64px;
+    @include flex($justify:space-between,$gap:0);
+    margin: 0 auto;
+}
+
+.nav__list {
+    @include flex($gap:24px);
+}
+
+.logo__title {
+    color: $primary-text;
+    font-size: 32px;
+}
+
+.nav__link {
+    color: $primary-text;
+    font-size: 14px;
+    transition: 0.3s;
+    letter-spacing: 0.1em;
+}
+
+.nav__link--active {
+    color: $active-text;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.nav__link:hover, .logo__title:hover {
+    color: $active-text;
+}
+
+.booking__btn {
+    border: none;
+    background-color: $primary-text;
+    color: white;
+    padding: 12px 32px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.booking__btn:hover {
+    background-color: $active-text;
+}
+
+.burger__menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+}
+.burger__menu span {
+    height: 3px;
+    width: 24px;
+    background-color: $active-text;
+}
+//=========== RESPONSIVE ======
+
+
+
+@media (max-width:970px){
+    .logo__title {
+        font-size: 24px;
+    }
+    .nav__list {
+        gap: 10px;
+
+    }
+    .nav__link {
+        font-size: 13px;
+    }
+    .booking__btn {
+        padding: 8px 24px;
+    }
+}
+
+@media (max-width:834px){
+    .logo__title{
+        font-size: 32px;
+    }
+    .navbar {
+        position: absolute; 
+        top: 100%; 
+        left: -100%; 
+        width: 100%; 
+        background: $background-primary; 
+        transition: 0.3s; 
+    }
+    .navbar.active { 
+        left: 0; 
+    }
+    .nav__list { 
+        flex-direction: column; 
+        padding: 30px; 
+        gap: 20px; 
+        text-align: center; 
+    }
+    .header__container {
+        justify-content: space-around;
+        padding: 13px 20px;
+    }
+    .burger__menu {
+        display: flex;
+    }
+    .booking__btn{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .logo__title{
+        font-size: 26px;
+    }
+}
+
