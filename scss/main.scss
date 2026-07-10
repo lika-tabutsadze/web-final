@@ -11,7 +11,7 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: transparent;
+    background-color: $background-primary;
     width: 100%;
 }
 
@@ -72,11 +72,46 @@ body {
     width: 24px;
     background-color: $active-text;
 }
+
+
+// =========STYLING THE HERO SECTION ====================
+
+.hero__section {
+    background-image: url("../images/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+}
+.hero__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.hero__title {
+    font-size: 64px;
+    color: $primary-text;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+.hero__desc {
+    color: $background-primary;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+
+}
+
 //=========== RESPONSIVE ======
 
 
 
 @media (max-width:970px){
+
+    // ========= HEADER RESPOSNIVE ======
     .logo__title {
         font-size: 24px;
     }
@@ -93,6 +128,7 @@ body {
 }
 
 @media (max-width:834px){
+    // ============ HEADER RESPONSIVE ============
     .logo__title{
         font-size: 32px;
     }
@@ -123,11 +159,41 @@ body {
     .booking__btn{
         display: none;
     }
-}
+
+    // ======= HERO SECTION RESPONSIVE =============
+    .hero__title {
+        font-size: 44px;
+    }
+    
 
 @media (max-width: 480px){
+    // ======HEADER REPOSNIVE =========
     .logo__title{
         font-size: 26px;
     }
+
+    // =======HERO SECTION===========
+    .hero__title {
+        font-size: 34px;
+    }
+    .hero__desc {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+}
 }
 
+@media (max-width:320px){
+    // =======HEADER RESPONSIVE =====
+    .logo__title {
+        font-size: 22px;
+    }
+    .header__container {
+        padding: 13px 2px;
+    }
+
+    // =====HERO SECTION=========
+    .hero__title {
+        font-size: 30px;
+    }
+}
