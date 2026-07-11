@@ -2,6 +2,23 @@ body {
   font-family: "Playfair Display";
 }
 
+.scroll__btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  padding: 1rem;
+  border: none;
+  background-color: rgb(163, 132, 77);
+  color: rgb(249, 248, 246);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+  z-index: 99;
+  display: none;
+}
+
 .main__header {
   position: sticky;
   top: 0;
@@ -327,7 +344,7 @@ body {
 }
 
 .accomm__title h3 {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.2;
   color: #1C1C1A;
 }
@@ -364,6 +381,13 @@ body {
   color: rgb(163, 132, 77);
   font-size: 2.25rem;
   line-height: 2.5rem;
+  transition: 0.3s;
+}
+
+.accomm__icon:hover {
+  background-color: rgb(163, 132, 77);
+  color: rgb(249, 248, 246);
+  transform: scale(1.1);
 }
 
 .accomm__desc {
@@ -557,6 +581,10 @@ body {
   .footer__title {
     text-align: center;
   }
+  .scroll__btn {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 320px) {
   .logo__title {
@@ -579,5 +607,40 @@ body {
   }
   .about__description a {
     font-size: 0.6rem;
+  }
+  .room__desc__text h3 {
+    font-size: 1.3rem;
+  }
+  .rooms__title h2 {
+    font-size: 1.5rem;
+  }
+  .room__btn {
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  .room__card {
+    max-width: 200px;
+  }
+  .room__image {
+    max-height: 150px;
+    max-width: 200px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .accomm__title span {
+    font-size: 0.4rem;
+  }
+  .accomm__title h3 {
+    font-size: 1.3rem;
+  }
+  .accomm__icon {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .accomm__desc h4 {
+    font-size: 1rem;
+  }
+  .accomm__desc p {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=main.css.map */

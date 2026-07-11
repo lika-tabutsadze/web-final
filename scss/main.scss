@@ -5,6 +5,25 @@ body {
     font-family: 'Playfair Display';
 }
 
+// STYLING THE SCROLL TO TOP BUTTON
+.scroll__btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    padding: 1rem;
+    border: none;
+    background-color: $active-text;
+    color: $background-primary;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    z-index: 99;
+    display: none;
+}
+
+
 // ======STYLING THE HEADER =========
 .main__header {
     position: sticky;
@@ -143,12 +162,10 @@ body {
     
 }
 .about__description span {
-    @include sec-category;
+    @include section-category;
 }
 .about__description h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-    color: $primary-text;
+    @include sectiin-title;
 }
 .about__description p {
     line-height: 1.625;
@@ -204,12 +221,10 @@ body {
     flex-direction: column;
 }
 .rooms__title span {
-    @include sec-category;
+    @include section-category;
 }
 .rooms__title h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-    color: $primary-text;
+    @include section-title;
 }
 
 .room__cards {
@@ -291,13 +306,11 @@ body {
 }
 
 .accomm__title h3 {
-    font-size: 48px;
-    line-height: 1.2;
-    color: $primary-text;
+    @include section-title;
 }
 
 .accomm__title span {
-    @include sec-category;
+    @include section-category;
 }
 
 .accomm__cards {
@@ -320,6 +333,14 @@ body {
     color: $active-text;
     font-size: 2.25rem;
     line-height: 2.5rem;
+    transition: 0.3s;
+}
+
+.accomm__icon:hover {
+    background-color: $active-text;
+    color: $background-primary;
+    transform: scale(1.1)
+
 }
 
 .accomm__desc {
@@ -541,6 +562,12 @@ body {
     .footer__title{
         text-align: center;
     }
+
+    // SCROLL TO TOP BUTTON
+    .scroll__btn {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -571,5 +598,45 @@ body {
     }
     .about__description a {
         font-size: 0.6rem;
+    }
+
+    // ROOM SECTION 
+    .room__desc__text h3 {
+        font-size: 1.3rem;
+    }
+    .rooms__title h2 {
+        font-size: 1.5rem;
+    }
+    .room__btn {
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
+    .room__card {
+        max-width: 200px;
+        
+    }
+    .room__image {
+        max-height: 150px;
+        max-width: 200px;
+        object-fit: contain;
+    }
+
+    // ACCOMMODATION SECTION
+    .accomm__title span {
+        font-size: 0.4rem;
+    }
+    .accomm__title h3 {
+        font-size: 1.3rem;
+    }
+    .accomm__icon {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .accomm__desc h4 {
+        font-size: 1rem;
+
+    }
+    .accomm__desc p {
+        font-size: 0.8rem;
     }
 }
