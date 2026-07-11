@@ -775,7 +775,78 @@ body {
     object-fit: cover;
 }
 
-//=========== RESPONSIVE ======
+// =================== STYLING THE OFFER SECTION - ROOMS HTML PAGE ===============
+
+.offer__section{
+    background-color: $background-primary;
+    padding: 8rem 4rem;
+    width: 100vw;
+    @include flex;
+}
+.offer__container {
+    display:flex;
+    gap: 3rem;
+    align-items: center;
+    padding: 6rem;
+    background-color: #181818;
+}
+.offer__text h4 {
+    @include section-title;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.offer__text p {
+    max-width: 36rem;
+    font-size: 1.1rem;
+    color: rgb(255 255 255 / 0.7);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+.offer__btn {
+    padding: 1rem 2.5rem;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background-color: $active-text;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.offer__btn:hover{
+    background-color: white;
+    color: #181818;
+}
+
+.offer__image{
+    background-image: url("../images/rooms-page/offer.jpg");
+    width: 320px;
+    height: 320px;
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.offer__image:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+// ===================================================================
+//================================ RESPONSIVE ==============================
+// ===================================================================
 
 @media (max-width:1140px){
     //==== ABOUT US SECTION ======
@@ -994,6 +1065,21 @@ body {
     .comfort__icons {
             grid-template-columns: repeat(2, 160px);
     }
+
+    // =======OFFER SECTION================
+    .offer__text h4 {
+        font-size: 2rem;
+    }
+    .offer__text p {
+        font-size: 18px;
+    }
+    .offer__container {
+        flex-direction: column;
+    }
+    
+    .offer__image{
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px){
@@ -1092,6 +1178,18 @@ body {
     
    }
 
+//    =======OFFER SECTION==========
+
+    .offer__text h4 {
+        font-size: 1.4rem;
+    }
+    .offer__text p {
+        font-size: 14px;
+    }
+
+    .offer__btn {
+        padding: 0.9rem 1.3rem;
+    }
 
 }
 

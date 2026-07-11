@@ -911,6 +911,73 @@ body {
      object-fit: cover;
 }
 
+.offer__section {
+  background-color: rgb(249, 248, 246);
+  padding: 8rem 4rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.offer__container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding: 6rem;
+  background-color: #181818;
+}
+
+.offer__text h4 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1C1C1A;
+  cursor: default;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.offer__text p {
+  max-width: 36rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.offer__btn {
+  padding: 1rem 2.5rem;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  background-color: rgb(163, 132, 77);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.offer__btn:hover {
+  background-color: white;
+  color: #181818;
+}
+
+.offer__image {
+  background-image: url("../images/rooms-page/offer.jpg");
+  width: 320px;
+  height: 320px;
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 0.3s;
+}
+
+.offer__image:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 1140px) {
   .about__description h2 {
     font-size: 2.8rem;
@@ -1078,6 +1145,18 @@ body {
   .comfort__icons {
     grid-template-columns: repeat(2, 160px);
   }
+  .offer__text h4 {
+    font-size: 2rem;
+  }
+  .offer__text p {
+    font-size: 18px;
+  }
+  .offer__container {
+    flex-direction: column;
+  }
+  .offer__image {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .logo__title {
@@ -1144,6 +1223,15 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     row-gap: 1rem;
+  }
+  .offer__text h4 {
+    font-size: 1.4rem;
+  }
+  .offer__text p {
+    font-size: 14px;
+  }
+  .offer__btn {
+    padding: 0.9rem 1.3rem;
   }
 }
 @media (max-width: 320px) {
