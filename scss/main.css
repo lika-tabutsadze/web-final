@@ -13,10 +13,10 @@ body {
   color: rgb(249, 248, 246);
   font-size: 1.2rem;
   cursor: pointer;
-  transform: translateY(15px);
-  transition: all 0.3s ease;
   z-index: 99;
   display: none;
+  animation: bounce;
+  animation-duration: 2s;
 }
 
 .main__header {

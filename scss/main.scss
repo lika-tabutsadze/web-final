@@ -17,11 +17,13 @@ body {
     color: $background-primary;
     font-size: 1.2rem;
     cursor: pointer;
-    transform: translateY(15px);
-    transition: all 0.3s ease;
     z-index: 99;
     display: none;
+    animation: bounce;
+    animation-duration: 2s;
+    
 }
+
 
 
 // ======STYLING THE HEADER =========
@@ -165,7 +167,7 @@ body {
     @include section-category;
 }
 .about__description h2 {
-    @include sectiin-title;
+    @include section-title;
 }
 .about__description p {
     line-height: 1.625;
