@@ -478,6 +478,79 @@ body {
     color: $secondary-text;
 }
 
+// ============ STYLING THE STAFF SECTION ===========
+
+.about-staff__section {
+    background-color: $background-primary;
+    padding: 8rem 4rem;
+    @include flex;
+}
+
+.staff__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 3rem;
+}
+
+.staff__container {
+    @include flex($gap:3rem);
+    flex-direction: column;
+    
+}
+.staff__title {
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.staff__title h3 {
+    @include section-title;
+}
+
+.staff__title span {
+    @include section-category;
+}
+
+.staff__card {
+    max-width: 363px;
+    transition: 0.3s;
+}
+
+.staff__card:hover {
+    transform: scale(1.1);
+}
+
+.staff__img {
+    height: 363px;
+}
+
+.staff__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.staff__img img:hover {
+    filter:grayscale(0%);
+}
+
+.staff__info {
+    padding: 2rem 0;
+    @include flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.staff__info h4 {
+    font-size: 2rem;
+}
+
+.staff__info span {
+    @include section-category;
+}
+
 //=========== RESPONSIVE ======
 
 @media (max-width:1140px){
@@ -634,6 +707,17 @@ body {
         font-size: 0.9rem;
     }
 
+    // ========== STAFF SECTION ========
+    .staff__title h3 {
+        font-size: 1.8rem;
+    }
+    .staff__cards {
+        grid-template-columns: 1fr;
+    }
+    .staff__info h4 {
+        font-size: 1.4rem;
+    }
+
 }
 
 @media (max-width: 480px){
@@ -786,6 +870,19 @@ body {
     }
     .values__title span {
         font-size: 0.5rem;
+    }
+
+    // STAFF SECTION
+
+    .staff__title h3 {
+        font-size: 1.4rem;
+    }
+    .staff__title span {
+        font-size: 0.6rem;
+    }
+
+    .staff__info span {
+        font-size: 0.6rem;
     }
 
 }
