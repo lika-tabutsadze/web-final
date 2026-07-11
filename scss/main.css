@@ -978,6 +978,116 @@ body {
   transform: scale(1.1);
 }
 
+.services-hero__section {
+  background-image: url("../images/services-page/hero_background.jpg");
+}
+
+.services-hero__title {
+  color: white;
+}
+
+.services-hero__span {
+  letter-spacing: 0.3em;
+  font-size: 12px;
+  color: rgb(163, 132, 77);
+  font-weight: bold;
+  cursor: default;
+}
+
+.service__section {
+  background-color: rgb(249, 248, 246);
+  padding: 10rem 4rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.service__container {
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service__title h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1C1C1A;
+  cursor: default;
+  margin-bottom: 1.5rem;
+}
+
+.service__title p {
+  line-height: 1.6;
+  color: rgb(68, 71, 74);
+}
+
+.service__title {
+  max-width: 42rem;
+  margin-bottom: 4rem;
+}
+
+.service__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.serv__img1 {
+  background-image: url("../images/services-page/spa.jpg");
+}
+
+.serv__img2 {
+  background-image: url("../images/services-page/restaurant.jpg");
+}
+
+.serv__img3 {
+  background-image: url("../images/services-page/conference.jpg");
+}
+
+.serv__img4 {
+  background-image: url("../images/services-page/concierge.jpg");
+}
+
+.service__card__image {
+  width: 564px;
+  height: 564px;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s;
+}
+
+.service__card__image:hover {
+  transform: scale(1.025);
+}
+
+.service__desc {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 564px;
+}
+
+.service__desc h3 {
+  font-size: 32px;
+  line-height: 1.3;
+  color: #1C1C1A;
+}
+
+.service__desc p {
+  line-height: 1.6;
+  color: rgb(68, 71, 74);
+}
+
+.service__desc a {
+  color: rgb(163, 132, 77);
+  -webkit-text-decoration: underline dotted 0.5px;
+          text-decoration: underline dotted 0.5px;
+  text-underline-offset: 5px;
+}
+
 @media (max-width: 1140px) {
   .about__description h2 {
     font-size: 2.8rem;
@@ -1029,6 +1139,34 @@ body {
   }
   .comfort__container {
     grid-template-columns: 1fr;
+  }
+  .service__title {
+    max-width: 400px;
+  }
+  .service__title h2 {
+    font-size: 2rem;
+  }
+  .service__title p {
+    font-size: 14px;
+  }
+  .service__cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .service__card__image {
+    width: 400px;
+    height: 400px;
+  }
+  .service__desc {
+    max-width: 400px;
+  }
+  .service__desc h3 {
+    font-size: 1.5rem;
+  }
+  .service__desc p {
+    font-size: 0.8rem;
+  }
+  .service__desc a {
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 834px) {
@@ -1232,6 +1370,34 @@ body {
   }
   .offer__btn {
     padding: 0.9rem 1.3rem;
+  }
+  .service__title {
+    max-width: 200px;
+  }
+  .service__title h2 {
+    font-size: 1.5rem;
+  }
+  .service__title p {
+    font-size: 12px;
+  }
+  .service__cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .service__card__image {
+    width: 200px;
+    height: 200px;
+  }
+  .service__desc {
+    max-width: 200px;
+  }
+  .service__desc h3 {
+    font-size: 1rem;
+  }
+  .service__desc p {
+    font-size: 0.7rem;
+  }
+  .service__desc a {
+    font-size: 0.6rem;
   }
 }
 @media (max-width: 320px) {
