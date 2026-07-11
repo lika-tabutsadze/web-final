@@ -843,6 +843,74 @@ body {
   background-color: rgb(163, 132, 77);
 }
 
+.comfort__section {
+  background-color: rgb(240, 237, 233, var(--tw-bg-opacity, 1));
+  padding: 8rem 4rem;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.comfort__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.comfort__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.comfort__text span {
+  letter-spacing: 0.3em;
+  font-size: 12px;
+  color: rgb(163, 132, 77);
+  font-weight: bold;
+  cursor: default;
+}
+
+.comfort__text h3 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1C1C1A;
+  cursor: default;
+}
+
+.comfort__text p {
+  font-size: 18px;
+  color: rgb(68, 71, 74);
+  line-height: 1.2;
+}
+
+.comfort__icons {
+  display: grid;
+  grid-template-columns: repeat(2, 260px);
+  grid-template-rows: repeat(3, 48px);
+  align-items: center;
+}
+
+.comfort__icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgb(163, 132, 77);
+}
+
+.comfort__icon span {
+  color: #1C1C1A;
+}
+
+.comfort__image {
+  background-image: url("../images/rooms-page/comfort.jpg");
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 1140px) {
   .about__description h2 {
     font-size: 2.8rem;
@@ -891,6 +959,9 @@ body {
   }
   .values__title h2 {
     font-size: 2.5rem;
+  }
+  .comfort__container {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 834px) {
@@ -995,6 +1066,18 @@ body {
   .room__btn {
     display: flex;
   }
+  .comfort__text h3 {
+    font-size: 1.8rem;
+  }
+  .comfort__text p {
+    font-size: 0.8rem;
+  }
+  .comfort__icon span {
+    font-size: 10px;
+  }
+  .comfort__icons {
+    grid-template-columns: repeat(2, 160px);
+  }
 }
 @media (max-width: 480px) {
   .logo__title {
@@ -1041,6 +1124,26 @@ body {
   }
   .room__title h2 {
     font-size: 1.5rem;
+  }
+  .comfort__text {
+    text-align: center;
+  }
+  .comfort__text h3 {
+    font-size: 1.2rem;
+  }
+  .comfort__text p {
+    font-size: 0.5rem;
+  }
+  .comfort__text span {
+    font-size: 0.5rem;
+  }
+  .comfort__icon {
+    font-size: 0.8rem;
+  }
+  .comfort__icons {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 1rem;
   }
 }
 @media (max-width: 320px) {
