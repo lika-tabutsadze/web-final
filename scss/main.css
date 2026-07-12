@@ -1516,6 +1516,7 @@ body {
   }
   .service__title {
     max-width: 200px;
+    text-align: center;
   }
   .service__title h2 {
     font-size: 1.5rem;
@@ -1531,6 +1532,7 @@ body {
     height: 200px;
   }
   .service__desc {
+    text-align: center;
     max-width: 200px;
   }
   .service__desc h3 {
