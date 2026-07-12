@@ -291,6 +291,7 @@ body {
   justify-content: space-between;
   padding: 0.5rem;
   min-height: 203px;
+  padding: 15px 20px;
 }
 
 .room__desc__text {
