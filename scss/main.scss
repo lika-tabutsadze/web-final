@@ -236,9 +236,12 @@ body {
 }
 .room__card {
     max-width: 265px;
-    min-height: 468px;
+    min-height: max-content;
+    border-radius: 12px;
+    overflow: hidden;
     transition: 0.3s;
     justify-content: space-between;
+    background-color: $background-primary;
 }
 .room__image {
     width: 265px;
@@ -276,6 +279,7 @@ body {
     padding: 0.75rem 1.5rem;
     border: 1px solid rgb(117 119 122);
     transition: 0.3s;
+    text-align: center;
 }
 .room__card:hover {
     transform: scale(1.1);
@@ -1221,12 +1225,29 @@ body {
     // ABOUT US SECTION 
     .about__description h2 {
         font-size: 2rem;
+
     }
-    
+    .about__description {
+        max-width: 180px;
+        align-items: center;
+        justify-content: center;
+    }
+    .about__container {
+        @include flex;
+    }
     // ROOMS SECTION
     .rooms__title h2 {
         font-size: 2rem;
     }
+    .rooms__container {
+        margin: auto;
+        text-align: center;
+    }
+    .room__btn {
+        margin: auto;
+    }
+    
+    
 
     // ACCOMMODATION SECTION
     .accomm__cards {
@@ -1236,6 +1257,8 @@ body {
     // FOOTER
     .footer__container {
         flex-direction: column;
+        
+        text-align: center;
     }
     .footer__title{
         text-align: center;
