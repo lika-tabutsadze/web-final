@@ -1228,6 +1228,15 @@ body {
     grid-template-columns: 1fr;
     row-gap: 40px;
   }
+  .room__desc {
+    gap: 2rem;
+  }
+  .room__desc__text h3 {
+    font-size: 1rem;
+  }
+  .room__desc__text span {
+    font-size: 0.7rem;
+  }
   .accomm__title h3 {
     font-size: 2rem;
   }
