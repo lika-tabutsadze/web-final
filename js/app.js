@@ -32,3 +32,28 @@ scrollToTop.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+
+
+// CONTACT FORM
+
+document.getElementById('contact__form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            const btn = this.querySelector('.submit__btn');
+            btn.innerHTML = '<span class="btn__text">იგზავნება...</span>';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<span class="btn__text">წარმატებით გაიგზავნა!</span>';
+                btn.style.backgroundColor = '#4CAF50';
+                btn.style.opacity = '1';
+                this.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = '<span class="btn__text">შეტყობინების გაგზავნა</span>';
+                    btn.style.backgroundColor = '#000101';
+                    btn.disabled = false;
+                }, 3000);
+            }, 2000);
+        });

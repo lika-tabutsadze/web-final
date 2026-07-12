@@ -1081,6 +1081,184 @@ body {
 }
 
 
+// ===============================================================================================
+// ===================STYLING THE CONTACT HTML PAGE=================================
+// ======================================================================================
+
+
+// ==========STYLING THE HERO SECTION=============================
+.contact-hero__section {
+    background-image: url("../images/contact-page/contact-hero__background.jpg");
+}
+
+.contact-hero__title {
+    color: white;
+}
+
+// ===========STYLING THE CONTACT FORM SECTION================
+
+.main__contact__section {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 8rem 4rem;
+    background-color: $background-primary;
+}
+
+.contact__content__container {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 80px;
+}
+
+.contact__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info__item {
+    display: flex;
+    gap: 24px;
+    align-items: start;
+}
+
+
+.info__title {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: $active-text;
+    margin-bottom: 8px;
+}
+
+.info__text {
+    font-size: 16px;
+    color: $primary-text;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.social__block {
+    margin-top: 4rem;
+}
+
+.social__icons {
+    display: flex;
+    gap: 24px;
+}
+
+.social__link {
+    width: 48px;
+    height: 48px;
+    border: 1px solid $active-text;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-text;
+    transition:  0.3s ease;
+    color: $active-text;
+    margin-top: 0.7rem;
+}
+
+.social__link:hover {
+    transform: scale(1.2);
+}
+
+.contact__form__container {
+    background-color: white;
+    padding: 4rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.02);
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form__field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.input__field {
+    position: relative;
+}
+
+.input__field input, 
+.input__field textarea,
+.input__field select {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c5c6ca;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 1rem;
+    color: $primary-text;
+    outline: none;
+    transition:  0.3s ease;
+}
+
+.input__field select {
+    appearance: none;
+}
+
+.input__field input:focus, 
+.input__field textarea:focus,
+.input__field select:focus {
+    border-bottom-color: $active-text;
+}
+
+.input__field label {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 1rem;
+    color: $secondary-text;
+    transition:  0.3s ease;
+    pointer-events: none;
+}
+
+.submit__btn {
+    background-color: $primary-text;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition:  0.3s ease;
+}
+
+.submit__btn:hover {
+    background-color: $active-text
+}
+
+
+
+.input__field input:focus ~ label,
+.input__field input:not(:placeholder-shown) ~ label,
+.input__field textarea:focus ~ label,
+.input__field textarea:not(:placeholder-shown) ~ label,
+.input__field select:focus ~ label,
+.input__field select:valid ~ label {
+    top: -16px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: $active-text
+}
+
+
 
 
 // ===================================================================
@@ -1212,6 +1390,29 @@ body {
         font-size: 1rem;
         color: white;
     }
+
+    // ===============CONTACT FORM SECTION=====================
+    .contact__content__container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 4rem;
+    }
+    .info__list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact__title {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .contact__info {
+        width: 100%;
+        @include flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
 }
 
 @media (max-width:834px){
@@ -1419,6 +1620,25 @@ body {
    
 }
 
+
+@media (max-width: 768px){
+    // ===============CONTACT FORM SECTION=====================
+    .info__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form__field {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .input__field select {
+        font-size: 14px;
+    }
+    .input__field label {
+        font-size: 14px;
+    }
+}
+
+
 @media (max-width: 480px){
     // ======HEADER REPOSNIVE =========
     .logo__title{
@@ -1603,6 +1823,39 @@ body {
         font-size: 0.6rem;
       }
 
+
+       // ===============CONTACT FORM SECTION=====================
+       .contact__title {
+        font-size: 1.5rem;
+       }
+
+       .info__title {
+        font-size: 14px;
+       }
+       .info__text {
+
+        font-size: 12px;
+       }
+
+    
+       .submit__btn {
+        padding: 15px;
+        font-size: 10px;
+        letter-spacing: 0.05em;
+       }
+       .input__field label {
+        font-size: 10px;
+       }
+
+       .input__field select {
+        font-size: 10px;
+       }
+       .contact__form__container {
+        padding: 2rem;
+       }
+
+
+
 }
 
 
@@ -1714,7 +1967,7 @@ body {
 
     // ====================PREMIUM SECTION======================
       .premium__container {
-        max-width: 200px;
+        max-width: 220px;
         padding: 1rem;
         
       }
@@ -1726,5 +1979,34 @@ body {
         padding: 0.3rem;
         width: 100%;
       }
+
+    //  ================== CONTACT FORM ================
+    .input__field label {
+        font-size: 8px;
+        
+    }
+    .input__field select {
+        font-size: 8px;
+        text-wrap: wrap;
+    }
+    .subject__label {
+        display: none;
+        
+    }
+    
+    .submit__btn {
+        font-size: 8px;
+    }
+    .contact__title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .social__icons {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
 
 }
